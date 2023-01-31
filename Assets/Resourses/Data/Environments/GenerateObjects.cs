@@ -35,10 +35,5 @@ public class GenerateObjects : MonoBehaviour
 
             }
         }
-
-        void Update()
-        {
-
-        }
     }
 }

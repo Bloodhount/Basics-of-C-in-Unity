@@ -1,7 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
-using UnityEngine.Events;
+//using UnityEngine.Events;
 
 namespace GB
 {
@@ -12,17 +11,8 @@ namespace GB
 
         // [SerializeField] private UnityEvent _eventOnTakeDamage;
 
-        //  ToDo    interface ITakeDamage       {  }
         //  ToDo    interface IDie     { }
-        //public virtual void TakeDamage(int damageValue)
-        //{
-        //    Health -= damageValue;
-        //    if (Health <= 0)
-        //    {
-        //        Health = 0;
-        //        Die();
-        //    }
-        //}
+
         public virtual void Heal(int healthValue)
         {
             Debug.Log($" {name} - Heal");
@@ -37,20 +27,5 @@ namespace GB
         {
             Debug.Log($" {name} - Die");
         }
-        public void ShowInfo()
-        {
-            //  ToDo   remake
-            Debug.Log($" {name} - " + GetType().Name + $"health: {Health}");
-        }
-        // abstract class
-        /*
-         *         void Start()
-        {
-
-        }
-        void Update()
-        {
-
-        }*/
     }
 }

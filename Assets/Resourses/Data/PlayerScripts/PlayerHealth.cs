@@ -5,41 +5,34 @@ using UnityEngine;
 
 namespace GB
 {
-    public sealed class PlayerHealth : BaseHealth, ITakeDamage   //MonoBehaviour
+    public sealed class PlayerHealth : BaseHealth, ITakeDamage, ILog  //MonoBehaviour
     {
-
         [SerializeField] private AudioSource TakeDamageSFX;
         [SerializeField] private AudioSource HealSFX;
-        //public PlayerHealth(int health)
-        //{
-        //    Health = health;
-        //    //  base.Health = health;
-        //}
-        //void Start()
-        //{
-        //    TakeDamageSFX = GetComponent<AudioSource>();
-        //    HealSFX = GetComponent<AudioSource>();
-        //}
+
         public void TakeDamage(int damageValue)
         {
             Health -= damageValue;
             TakeDamageSFX.Play();
+            Debug.Log( $" {name} - <color=red>Damaged</color>"); 
             if (Health <= 0)
             {
                 Health = 0;
                 Die();
+                Log<string>($"{ name }", " - Die");
             }
-            //Debug.Log($" {name} - Heal");
         }
         public override void Heal(int healthValue)
         {
             base.Heal(healthValue);
             HealSFX.Play();
+            Log<string>($"{name}", " - Heal");
+            // Debug.Log($" {name} - Heal");
         }
-        //void Update()
-        //{
-
-        //}
+        public void Log<String>(string name, string msg)
+        {
+            Debug.Log($" { name } - { msg }");
+        }
     }
 
 }

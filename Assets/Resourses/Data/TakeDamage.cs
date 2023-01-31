@@ -5,7 +5,7 @@ using GB;
 
 public sealed class TakeDamage : MonoBehaviour
 {
-    [SerializeField] protected EnemyHealth _enemyHealth;
+    [SerializeField] private EnemyHealth _enemyHealth;
     void Start()
     {
         _enemyHealth = GetComponent<EnemyHealth>();

@@ -73,6 +73,9 @@
     <Compile Include="Assets\Resourses\Data\interfaces\ITakeDamage.cs" />
     <Compile Include="Assets\Resourses\Data\TakeDamage.cs" />
     <Compile Include="Assets\Resourses\Data\MakeDamage.cs" />
+    <Compile Include="Assets\Resourses\Data\interfaces\ILog.cs" />
+    <Compile Include="Assets\Resourses\Data\interfaces\ISlower.cs" />
+    <Compile Include="Assets\Resourses\Data\TrapSlower.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

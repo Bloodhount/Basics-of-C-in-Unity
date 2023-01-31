@@ -6,10 +6,6 @@ using GB;
 public class MakeDamage : MonoBehaviour
 {
     [SerializeField] private int _damageValue = 1;
-    void Start()
-    {
-
-    }
 
     private void OnCollisionEnter(Collision collision)
     {
