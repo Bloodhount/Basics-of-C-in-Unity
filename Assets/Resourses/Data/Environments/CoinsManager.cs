@@ -9,7 +9,9 @@ public class CoinsManager : MonoBehaviour
     [SerializeField] private int _numberOfCoins;
     [SerializeField] private int _coordinatesCoinGeneration;
 
+    [SerializeField] private AudioSource CollectCoinSFX;
     public GameObject CoinPrefab;
+
     public List<Loot> CoinsList = new List<Loot>();
     public Text CoinsText;
 
@@ -30,6 +32,7 @@ public class CoinsManager : MonoBehaviour
         CoinsList.Remove(coin);
         Destroy(coin.gameObject);
         UpdateText();
+        CollectCoinSFX.Play();
     }
 
     private void UpdateText()

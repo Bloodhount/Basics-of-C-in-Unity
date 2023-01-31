@@ -58,6 +58,8 @@
   <ItemGroup>
     <Compile Include="Assets\Resourses\Data\Environments\LootCounter.cs" />
     <Compile Include="Assets\Resourses\Data\Environments\GenerateObjects.cs" />
+    <Compile Include="Assets\Resourses\Data\BaseHealth.cs" />
+    <Compile Include="Assets\Resourses\Data\PlayerScripts\PlayerHealth.cs" />
     <Compile Include="Assets\Resourses\Data\PlayerScripts\CameraFollowTo.cs" />
     <Compile Include="Assets\Resourses\Data\Environments\CoinsManager.cs" />
     <Compile Include="Assets\Resourses\Data\Environments\Loot.cs" />
@@ -66,6 +68,11 @@
     <Compile Include="Assets\Resourses\Data\Environments\Icon.cs" />
     <Compile Include="Assets\Resourses\Data\PlayerScripts\PlayerMoveComtroller.cs" />
     <Compile Include="Assets\Resourses\Data\PlayerScripts\Pointer.cs" />
+    <Compile Include="Assets\Resourses\Data\EnemyData\EnemyHealth.cs" />
+    <Compile Include="Assets\Resourses\Data\AidKit.cs" />
+    <Compile Include="Assets\Resourses\Data\interfaces\ITakeDamage.cs" />
+    <Compile Include="Assets\Resourses\Data\TakeDamage.cs" />
+    <Compile Include="Assets\Resourses\Data\MakeDamage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
