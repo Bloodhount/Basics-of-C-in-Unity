@@ -10,10 +10,12 @@ public class CoinsManager : MonoBehaviour
     [SerializeField] private int _coordinatesCoinGeneration;
 
     [SerializeField] private AudioSource CollectCoinSFX;
+    [SerializeField] private GameObject _win;
     public GameObject CoinPrefab;
 
     public List<Loot> CoinsList = new List<Loot>();
     public Text CoinsText;
+
 
     void Start()
     {
@@ -33,6 +35,10 @@ public class CoinsManager : MonoBehaviour
         Destroy(coin.gameObject);
         UpdateText();
         CollectCoinSFX.Play();
+        if (CoinsList.Count == 0)
+        {
+            _win.SetActive(true);
+        }
     }
 
     private void UpdateText()
@@ -54,6 +60,6 @@ public class CoinsManager : MonoBehaviour
                 closestLoot = CoinsList[i];
             }
         }
-            return closestLoot;
+        return closestLoot;
     }
 }

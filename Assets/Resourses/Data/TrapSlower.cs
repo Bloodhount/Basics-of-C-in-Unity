@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TrapSlower : MonoBehaviour, ISlower
+public sealed class TrapSlower : MonoBehaviour, ISlower
 {
     private PlayerMoveComtroller player;
     public void Slower()

@@ -47,7 +47,7 @@
   <PropertyGroup>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UnityProjectGenerator>Package</UnityProjectGenerator>
-    <UnityProjectGeneratorVersion>2.0.16</UnityProjectGeneratorVersion>
+    <UnityProjectGeneratorVersion>2.0.17</UnityProjectGeneratorVersion>
     <UnityProjectType>Editor:5</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2021.3.9f1</UnityVersion>
@@ -353,9 +353,9 @@
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.7\Editor\Drawing\Manipulators\WindowDraggable.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.7\Editor\Data\Nodes\Utility\SplitTextureTransformNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.7\Editor\Generation\Processors\ShaderGeneratorNames.cs" />
-    <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.7\Editor\Data\Attributes\ContextFilterableAttribute.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.7\Editor\Util\AssertHelpers.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.7\Editor\Data\Util\StackPool.cs" />
+    <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.7\Editor\Data\Attributes\ContextFilterableAttribute.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.7\Editor\Drawing\MaterialGraphPreviewGenerator.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.7\Editor\Data\Nodes\Math\Trigonometry\HyperbolicTangentNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.7\Editor\Data\Util\KeywordDependentCollection.cs" />
@@ -421,10 +421,10 @@
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.7\Editor\Drawing\Inspector\PropertyDrawers\SamplerStateNodePropertyDrawer.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.7\Editor\Data\Legacy\ILegacyTarget.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.7\Editor\Data\Nodes\Input\Geometry\BitangentVectorNode.cs" />
-    <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.7\Editor\Drawing\Blackboard\SGBlackboard.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.7\Editor\Generation\Enumerations\NormalDropOffSpace.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.7\Editor\Drawing\Views\Slots\GradientSlotControlView.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.7\Editor\Generation\Collections\PassCollection.cs" />
+    <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.7\Editor\Drawing\Blackboard\SGBlackboard.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.7\Editor\Util\MessageManager.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.7\Editor\Generation\Enumerations\Platform.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.7\Editor\Data\Implementation\Edge.cs" />
@@ -482,8 +482,8 @@
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.7\Editor\Data\Nodes\Math\Vector\DistanceNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.7\Editor\Data\Nodes\Math\Derivative\DDXYNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.7\Editor\Drawing\Views\PropertySheet.cs" />
-    <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.7\Editor\Data\Nodes\Input\Matrix\Matrix4Node.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.7\Editor\Generation\Collections\AssetCollection.cs" />
+    <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.7\Editor\Data\Nodes\Input\Matrix\Matrix4Node.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.7\Editor\Data\Nodes\Procedural\Shape\RectangleNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.7\Editor\Data\Nodes\Math\Trigonometry\DegreesToRadiansNode.cs" />
     <Compile Include="Library\PackageCache\com.unity.shadergraph@12.1.7\Editor\Data\Graphs\BooleanShaderProperty.cs" />
@@ -1116,11 +1116,11 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>Library\PackageCache\com.unity.ext.nunit@2.0.3\net40\unity-custom\nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="unityplastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.2\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
-    </Reference>
-    <Reference Include="nunit.framework">
-      <HintPath>Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Android.Types">
       <HintPath>E:\GAMES_DEVELOPMENT\UnityGameDev\official learning Unity\2021.3.9f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>

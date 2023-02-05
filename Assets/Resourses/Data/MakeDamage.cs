@@ -13,7 +13,7 @@ public class MakeDamage : MonoBehaviour
         {
             if (collision.rigidbody.GetComponent<PlayerHealth>())
             {
-                collision.rigidbody.GetComponent<PlayerHealth>().TakeDamage(_damageValue);
+                //collision.rigidbody.GetComponent<PlayerHealth>().TakeDamage(_damageValue);
             }
         }
     }

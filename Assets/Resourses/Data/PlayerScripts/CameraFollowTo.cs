@@ -31,14 +31,30 @@ public class CameraFollowTo : MonoBehaviour
         {
             summVectors += VelocitiesList[i];
         }
-        transform.position = _playerTransform.transform.position; // + _cameraOffset;
+
+        if (gameObject.transform)   // TODO
+        {
+            transform.position = _playerTransform.transform.position; // + _cameraOffset;
+        }
+        else
+        {
+            Debug.Log("gameObject.transform not found");
+        }
+
         transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(summVectors), Time.deltaTime * 5f);
     }
 
     private void FixedUpdate()
     {
-        VelocitiesList.Add(_playerRigidbody.velocity);
-        VelocitiesList.RemoveAt(0);
+        try
+        {
+            VelocitiesList.Add(_playerRigidbody.velocity);  // TODO
+            VelocitiesList.RemoveAt(0); // TODO
+        }
+        catch (System.ArgumentNullException e)
+        {
+            Debug.Log(e);
+        }
     }
 
     /// <summary>
