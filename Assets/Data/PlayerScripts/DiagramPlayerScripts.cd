@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AidKit" Collapsed="true">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Data\Environments\AidKit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bomb" Collapsed="true">
+    <Position X="7.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Data\Environments\Bomb.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CoinsManager" Collapsed="true">
+    <Position X="15.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACQAAABAACgAAAAAICAEgAAgAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Data\Environments\CoinsManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GenerateObjects" Collapsed="true">
+    <Position X="15.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAEAAAAACAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Data\Environments\GenerateObjects.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Icon" Collapsed="true">
+    <Position X="15.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Data\Environments\Icon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Loot" Collapsed="true">
+    <Position X="15.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Assets\Data\Environments\Loot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LootCounter" Collapsed="true">
+    <Position X="15.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAIICAAAAAAAAAAAAQAAgAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Data\Environments\LootCounter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MakeDamage" Collapsed="true">
+    <Position X="3" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Data\MakeDamage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CameraFollowTo" Collapsed="true">
+    <Position X="3.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAiAAAAAAASAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Data\PlayerScripts\CameraFollowTo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerMoveComtroller" BaseTypeListCollapsed="true">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAQFAAcAAiAAAIIgRAAAAAgAIQAAACAETAEJACQBAIA=</HashCode>
+      <FileName>Assets\Data\PlayerScripts\PlayerMoveComtroller.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Pointer" Collapsed="true">
+    <Position X="15.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAhAAA=</HashCode>
+      <FileName>Assets\Data\PlayerScripts\Pointer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TakeDamage">
+    <Position X="3" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAIAAAAAAAQAIAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Data\TakeDamage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TrapSlower" BaseTypeListCollapsed="true">
+    <Position X="12" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAABAAAAAAAAAAAAAAAIABAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Data\TrapSlower.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GB.BaseHealth" Collapsed="true">
+    <Position X="0.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAACACgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Data\BaseHealth.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GB.EnemyHealth" Collapsed="true">
+    <Position X="0.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAgAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Assets\Data\EnemyData\EnemyHealth.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GB.PlayerAbilities" Collapsed="true">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAACAAAAAAAAAAAAAAAlAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Data\PlayerScripts\PlayerAbilities.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GB.PlayerHealth" Collapsed="true">
+    <Position X="2.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAACAQAACAAAACgBAAAAAAAAAoAAQAAAAAAiAAAAAA=</HashCode>
+      <FileName>Assets\Data\PlayerScripts\PlayerHealth.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.179" />
+  </Class>
+  <Interface Name="IDeath" Collapsed="true">
+    <Position X="10" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Data\interfaces\IDeath.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ILog" Collapsed="true">
+    <Position X="10" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Data\interfaces\ILog.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ISlower" Collapsed="true">
+    <Position X="12" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Data\interfaces\ISlower.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ITakeDamage" Collapsed="true">
+    <Position X="3" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Assets\Data\interfaces\ITakeDamage.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Delegate Name="TestDelegate" Collapsed="true">
+    <Position X="8.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Data\PlayerScripts\PlayerMoveComtroller.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="TestDelegate2" Collapsed="true">
+    <Position X="10.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Data\PlayerScripts\PlayerMoveComtroller.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="TestDelegate3" Collapsed="true">
+    <Position X="12" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Data\PlayerScripts\PlayerMoveComtroller.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

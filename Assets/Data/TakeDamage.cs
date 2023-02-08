@@ -5,8 +5,10 @@ using GB;
 
 public sealed class TakeDamage : MonoBehaviour
 {
-    [SerializeField] private EnemyHealth _enemyHealth;
-    [SerializeField] private PlayerHealth _playerHealth;
+   // [SerializeField] 
+    private EnemyHealth _enemyHealth;
+   // [SerializeField] 
+    private PlayerHealth _playerHealth;
     void Start()
     {
         // _enemyHealth = GetComponent<EnemyHealth>();
@@ -30,11 +32,11 @@ public sealed class TakeDamage : MonoBehaviour
             }
             if (collision.rigidbody.GetComponent<PlayerHealth>())
             {
-                _enemyHealth.TakeDamage(1);
+                _enemyHealth.TakeDamage(1); Debug.LogError(collision.gameObject.name);
             }
             if (collision.rigidbody.GetComponent<EnemyHealth>())
             {
-                _playerHealth.TakeDamage(1);
+                _playerHealth.TakeDamage(1);Debug.LogError(collision.gameObject.name);
             }
         }
     }
