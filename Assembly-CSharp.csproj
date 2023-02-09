@@ -56,11 +56,13 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Menu\MenuScript.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
     <Compile Include="Assets\Data\interfaces\IDeath.cs" />
     <Compile Include="Assets\Data\Environments\LootCounter.cs" />
     <Compile Include="Assets\Data\Environments\GenerateObjects.cs" />
+    <Compile Include="Assets\Data\DisplayScripts\VFXDisplay.cs" />
     <Compile Include="Assets\Data\MakeDamage.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
@@ -77,6 +79,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
     <Compile Include="Assets\Data\PlayerScripts\CameraFollowTo.cs" />
     <Compile Include="Assets\Data\Environments\CoinsManager.cs" />
+    <Compile Include="Assets\Data\DisplayScripts\UIHpBarDisplay.cs" />
     <Compile Include="Assets\Data\TakeDamage.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
     <Compile Include="Assets\Data\PlayerScripts\PlayerAbilities.cs" />
@@ -107,7 +110,10 @@
     <Compile Include="Assets\Data\interfaces\ISlower.cs" />
     <Compile Include="Assets\Data\Environments\AidKit.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
+    <Compile Include="Assets\Data\EnemyData\LoadEnemy.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
+    <Compile Include="Assets\Data\DisplayScripts\HpBarDisplay.cs" />
+    <Compile Include="Assets\Data\DisplayScripts\BaseDisplay.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
@@ -116,11 +122,6 @@
     <Compile Include="Assets\Data\PlayerScripts\Pointer.cs" />
     <Compile Include="Assets\Data\EnemyData\EnemyHealth.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
-    <Compile Include="Assets\Data\DisplayScripts\HpBarDisplay.cs" />
-    <Compile Include="Assets\Data\DisplayScripts\VFXDisplay.cs" />
-    <Compile Include="Assets\Data\DisplayScripts\BaseDisplay.cs" />
-    <Compile Include="Assets\Data\DisplayScripts\UIHpBarDisplay.cs" />
-    <Compile Include="Assets\Data\EnemyData\LoadEnemy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

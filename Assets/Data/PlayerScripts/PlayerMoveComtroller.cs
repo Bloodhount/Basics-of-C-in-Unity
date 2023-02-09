@@ -136,7 +136,6 @@ public sealed class PlayerMoveComtroller : MonoBehaviour, IDisposable
         catch (Exception e)
         {
             LogException(e);
-            throw;
         }
     }
 
