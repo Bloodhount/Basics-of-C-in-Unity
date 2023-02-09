@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PlayerPursuit" Collapsed="true">
+    <Position X="3" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAQAAAAAAAAAAAAAABAAAACAAAAA=</HashCode>
+      <FileName>Assets\Data\EnemyData\PlayerPursuit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GB.BaseHealth" Collapsed="true">
+    <Position X="0.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAACACgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Data\BaseHealth.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GB.EnemyHealth" Collapsed="true">
+    <Position X="0.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAgAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Assets\Data\EnemyData\EnemyHealth.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="FPSCounter" Collapsed="true">
+    <Position X="10.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAADAAAEQAAAAAAAgAAAQAEAAAAAAAAQAAAAAQAA=</HashCode>
+      <FileName>Assets\Data\FPSCounter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FPSDisplay" Collapsed="true">
+    <Position X="12.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAACAAAIAAAIAAAAAAAQAAAAAAAAAAACACAAAAAEA=</HashCode>
+      <FileName>Assets\Data\FPSDisplay.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MakeDamage" Collapsed="true">
+    <Position X="12.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Data\MakeDamage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TakeDamage" Collapsed="true">
+    <Position X="10.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAIAAAAAAAQAIAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Data\TakeDamage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TrapSlower" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAABAAAAAAAAAAAAAAAIABAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Data\TrapSlower.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

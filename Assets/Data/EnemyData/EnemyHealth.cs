@@ -6,12 +6,12 @@ namespace GB
 {
     public sealed class EnemyHealth : BaseHealth, ITakeDamage  //MonoBehaviour
     {
-        // private int health = 5;
+        [UnityEngine.SerializeField] private int health = 2;
 
         private void Start()
         {
             //health = GetComponent<EnemyHealth>().Health;
-            // Health = health;
+            this.Health = health;
         }
         public void TakeDamage(int damageValue)
         {

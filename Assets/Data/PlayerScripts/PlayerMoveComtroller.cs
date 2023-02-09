@@ -7,7 +7,7 @@ using static UnityEngine.Debug;
 using TMPro;
 using System;
 
-//________________________________________
+//__________________ 1 ______________________
 //public static delegate void TestDelegate();
 public delegate void TestDelegate();
 public delegate void TestDelegate2(float value);
@@ -17,11 +17,11 @@ public delegate void TestDelegate3(bool val, float value);
 public sealed class PlayerMoveComtroller : MonoBehaviour, IDisposable
 {
 
-    //________________________________________
+    //__________________ 2 ______________________
     public static TestDelegate TestDelegate_1;
     public static TestDelegate TestDelegate_2;
     private TestDelegate2 test_2_Delegate;
-    private TestDelegate3 test_ShowAbility_Delegate;
+    private TestDelegate3 OnChangeAbility_Delegate;
     //2  private TestDelegate2 abilityDelegate;
     //________________________________________
 
@@ -48,21 +48,25 @@ public sealed class PlayerMoveComtroller : MonoBehaviour, IDisposable
     #region Code execution
     void Start()
     {
+        //var AidKit= Resources.Load<GameObject>("Resourses/Prefabs/AidKit");
+        //var aidInstance = GameObject.Instantiate(AidKit);
+        //aidInstance.
+
         _cameraTransformPoint = FindObjectOfType<CameraFollowTo>().transform;
         CoinsManager = FindObjectOfType<CoinsManager>();
         _rigidbody = GetComponent<Rigidbody>();
         _rigidbody.maxAngularVelocity = 100f;
 
+        //__________________ 3 ______________________
         #region Part 1/2 подписка
         // TestDelegate_1 = ability.Heal;
         TestDelegate_1 = PlayerAbilities.Heal;
         TestDelegate_1 += PlayerAbilities.FreezeEnemy;
         TestDelegate_2 = PlayerAbilities.SpeedBoost_2;
         PlayerAbilities.TestDelegate_3 = PlayerAbilities.SpeedBoost_2;
-
         //_____________________________________________
         test_2_Delegate += ShowSpeedDelegate; // part 1/2 подписка
-        test_ShowAbility_Delegate += ShowAbilityDelegate; // part 1/2 подписка
+        AddAbilityChangeListener(); // part 1/2 подписка
         _abilityIsActive = false;
         _bostValueLabel.gameObject.SetActive(_abilityIsActive);
         //  TODO
@@ -70,6 +74,7 @@ public sealed class PlayerMoveComtroller : MonoBehaviour, IDisposable
         #endregion                           
         //List<EnemyHealth> enemies = new List<EnemyHealth>();
     }
+
 
     void Update()
     {
@@ -80,8 +85,8 @@ public sealed class PlayerMoveComtroller : MonoBehaviour, IDisposable
             _rigidbody.AddForce(Vector3.up * _jumpPower, ForceMode.VelocityChange);
         }
 
+        //___________________ 4 __________________________
         #region TEST
-        //_____________________________________________
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             Debug.Log(" KeyCode.Alpha1 ");
@@ -113,8 +118,6 @@ public sealed class PlayerMoveComtroller : MonoBehaviour, IDisposable
             Destroy(gameObject); Log("Destroy(gameObject)");
         }
 
-        //  TODO
-        //4 abilityDelegate.Invoke();
         #endregion
 
         if (test_2_Delegate != null)
@@ -128,22 +131,12 @@ public sealed class PlayerMoveComtroller : MonoBehaviour, IDisposable
 
         try
         {
-            test_ShowAbility_Delegate?.Invoke(true, _torqueValue);
+            OnChangeAbility_Delegate?.Invoke(true, _torqueValue);
         }
         catch (Exception e)
         {
             LogException(e);
-            throw;
         }
-
-        //try
-        //{
-        //    //...
-        //}
-        //catch (System.Exception e)
-        //{
-        //    LogException(e);
-        //}
     }
 
 
@@ -166,21 +159,21 @@ public sealed class PlayerMoveComtroller : MonoBehaviour, IDisposable
         _rigidbody.AddTorque(_cameraTransformPoint.right * _inputDirVertical * _torqueValue);
     }
 
-    public void PlayerSpeedUp()  //  TODO  delegate
+    public void PlayerSpeedUp() 
     {
         _abilityIsActive = true;
         _speedBoostSFX.Play();
         _bostValueLabel.gameObject.SetActive(_abilityIsActive);
-        //test_ShowAbility_Delegate += ShowAbilityDelegate; // part 1/2 подписка
         _torqueValue *= 2;
     }
-    public void PlayerSpeedDown() //  TODO delegate
+    public void PlayerSpeedDown()
     {
         _torqueValue /= 2;
-        //float boostValue = _torqueValue;
         _abilityIsActive = false;
         ShowAbilityDelegate(_abilityIsActive, _torqueValue);
     }
+
+    // TODO вынести вьюшку в отдельный класс
     private void ShowSpeedDelegate(float speed)
     {
         float _playerSpeed = Mathf.RoundToInt(speed);
@@ -225,6 +218,7 @@ public sealed class PlayerMoveComtroller : MonoBehaviour, IDisposable
     }
     #endregion
 
+    //___________________ 5 __________________________
     #region Part 2/2 отписка
     private void OnDestroy()
     {
@@ -234,9 +228,13 @@ public sealed class PlayerMoveComtroller : MonoBehaviour, IDisposable
         PlayerAbilities.TestDelegate_3 -= PlayerAbilities.SpeedBoost_2;
     }
 
+    private void AddAbilityChangeListener()
+    {
+        OnChangeAbility_Delegate += ShowAbilityDelegate;
+    }
     public void Dispose()
     {
-        test_ShowAbility_Delegate -= ShowAbilityDelegate; // part 1/2 подписка
+        OnChangeAbility_Delegate -= ShowAbilityDelegate; // part 1/2 подписка
 
         //throw new NotImplementedException();
     }
