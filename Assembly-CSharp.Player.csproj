@@ -63,6 +63,7 @@
     <Compile Include="Assets\Data\Environments\LootCounter.cs" />
     <Compile Include="Assets\Data\Environments\GenerateObjects.cs" />
     <Compile Include="Assets\Data\DisplayScripts\VFXDisplay.cs" />
+    <Compile Include="Assets\Data\HW7task3.cs" />
     <Compile Include="Assets\Data\HW7task2.cs" />
     <Compile Include="Assets\Data\MakeDamage.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
@@ -123,7 +124,6 @@
     <Compile Include="Assets\Data\PlayerScripts\Pointer.cs" />
     <Compile Include="Assets\Data\EnemyData\EnemyHealth.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
-    <Compile Include="Assets\Data\HW7task3.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
