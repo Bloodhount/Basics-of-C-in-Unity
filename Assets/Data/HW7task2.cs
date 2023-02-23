@@ -6,8 +6,7 @@ public class HW7task2 : MonoBehaviour
 {
     void Start()
     {
-        // var a = new[] { 11, 11, 23, 23, 23, 23, 23, 44, 88, 88 };
-        string str1 = "dfsdfgwe32rqw24r";
+        string str1 = "dfsdfgwe32rqw24оривr";
         MyExtensions.FindingLengthtOfString(str1);
     }
 

@@ -6,27 +6,29 @@ public class HW7task3 : MonoBehaviour
 {
     void Start()
     {
-        var a = new[] { 11, 11, 23, 23, 23, 23, 23, 44, 88, 88 };
-        var h = new Dictionary<int, int>();
-      //  MyExtensions.FindingLengthtOfString(a, h);
+        var numbersList1 = new[] { 11, 11, 23, 23, 33, 33, 23, 23, 44, 88, 88, 88 };
+        var result = new Dictionary<int, int>();
+        var list2 = new List<int>();
+
+        MyExtensions2.CalculateCounNumInDictionary(numbersList1, result);
     }
 
 
 }
 public static class MyExtensions2
 {
-    public static void CalculateCounNumInDictionary(this int[] a, Dictionary<int, int> h)
+    public static void CalculateCounNumInDictionary(this int[] targetList, Dictionary<int, int> r)
     {
-        foreach (var i in a)
+        foreach (var i in targetList)
         {
             int res;
-            if (h.TryGetValue(i, out res))
-                h[i] += 1;
+            if (r.TryGetValue(i, out res))
+                r[i] += 1;
             else
-                h.Add(i, 1);
+                r.Add(i, 1);
         }
-        System.Diagnostics.Trace.WriteLine("count: " + h.Count);
-        foreach (var kv in h)
+        Debug.Log("number of original values: " + r.Count);
+        foreach (var kv in r)
             Debug.Log(kv.Key + " (" + kv.Value + ")");
     }
 }
