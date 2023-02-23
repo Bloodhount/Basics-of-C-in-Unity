@@ -241,7 +241,7 @@ public sealed class PlayerMoveComtroller : MonoBehaviour, IDisposable
 
     ~PlayerMoveComtroller()
     {
-        test_2_Delegate -= ShowSpeedDelegate; Log(" ~ PlayerMoveComtroller() Destructor)"); // part 2/2 отписка
+        test_2_Delegate -= ShowSpeedDelegate; // Log(" ~ PlayerMoveComtroller() Destructor)"); // part 2/2 отписка
     }
     #endregion
 }

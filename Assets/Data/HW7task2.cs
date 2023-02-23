@@ -13,17 +13,16 @@ public class HW7task2 : MonoBehaviour
         //Debug.Log("4 " + Application.temporaryCachePath);
 
         var savePath = Path.Combine(Application.dataPath, "sAvE.txt");
-        Debug.LogWarning(savePath);
+       // Debug.LogWarning(savePath);
         Save(savePath, "some save data...");
 
-        Debug.Log(Load(savePath));
+       // Debug.Log(Load(savePath));
         return;
 
         // home work 7
         string str1 = "dfsdfgwe32rqw24оривr";
         // MyExtensions.FindingLengthtOfString(str1);
     }
-
     public string Load(string savePath = null)
     {
         var result = "";
@@ -36,7 +35,6 @@ public class HW7task2 : MonoBehaviour
             return result;
         }
     }
-
     private static void Save(string savePath, string data)
     {
         using (var sw = new StreamWriter(savePath))
