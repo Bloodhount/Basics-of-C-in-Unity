@@ -6,7 +6,7 @@ public class HW7task3 : MonoBehaviour
 {
     void Start()
     {
-        var numbersList1 = new[] { 11, 11, 23, 23, 33, 33, 23, 23, 44, 88, 88, 88 };
+        var numbersList1 = new[] { 11, 11, 23, 23, 33, 7, 33, 23, 23, 44, 88, 7, 88, 88, 7, 7, 7, 7, 7 };
         var result = new Dictionary<int, int>();
         var list2 = new List<int>();
 
