@@ -12,7 +12,15 @@ public class HW8 : MonoBehaviour
     string path = null;
     private void Start()
     {
-        path = Path.Combine(Application.dataPath, "JsonSaveData.xml");
+        _saveData.Name = gameObject.name;
+        _saveData.Position = GetComponent<Transform>().position;
+        if (gameObject.activeSelf)
+        {
+            _saveData.IsEnabled = true;
+        }
+
+        // path = Path.Combine(Application.dataPath, $"JsonSaveData.xml");
+        path = Path.Combine(Application.dataPath, $"AllSaves/JsonSaveData{name}.xml");
         _jsonData.Save(_saveData, path);
     }
     private void Update()
@@ -20,6 +28,7 @@ public class HW8 : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.L))
         {
             var save = _jsonData.Load(path);
+            transform.position = save.Position;
             Debug.LogWarning(save);
         }
     }

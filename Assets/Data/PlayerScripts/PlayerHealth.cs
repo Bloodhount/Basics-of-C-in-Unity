@@ -17,9 +17,9 @@ namespace GB
         [SerializeField] private AudioSource HealSFX;
         [SerializeField] private GameObject _Lose;
         [SerializeField] private TextMeshProUGUI _playerHealthLabel;
-      //  [SerializeField] 
+        //  [SerializeField] 
         private UIHpBarDisplay _uIHp;
-      //  [SerializeField] 
+        //  [SerializeField] 
         private HpBarDisplay _hpBarMatColor;
 
         [Space(5)] [SerializeField] private UnityEvent _eventOnDie;
@@ -62,7 +62,15 @@ namespace GB
         }
         public override void Heal(int healthValue)
         {
-            base.Heal(healthValue);
+            // base.Heal(healthValue);
+            if (_hp < _MaxHp)
+            {
+                Health += healthValue;
+            }
+            if (Health > MaxHealth)
+            {
+                Health = MaxHealth;
+            }
             if (Health >= 0)
             {
                 _Lose.SetActive(false);
@@ -71,7 +79,7 @@ namespace GB
             _uIHp.OnHpChanged(Health, MaxHealth);
             _hpBarMatColor.OnMaterialColorChanged(Health, MaxHealth);
             HealSFX.Play();
-            Log<string>($"{name}", " - PlayerHealth.Heal");
+            Log<string>($"{name}", " - PlayerHealth.Heal. override void Heal");
             // Debug.Log($" {name} - Heal");
         }
         public override void Die()

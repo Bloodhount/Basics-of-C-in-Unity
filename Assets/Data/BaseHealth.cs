@@ -10,7 +10,7 @@ namespace GB
 
         public virtual void Heal(int healthValue)
         {
-            Debug.Log($" {name} - BaseHealth.Heal");
+            Debug.Log($" {name} - BaseHealth.Heal. virtual void Heal");
             Health += healthValue;
             if (Health > MaxHealth)
             {

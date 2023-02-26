@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MiniMapScript : MonoBehaviour
+public sealed class MiniMapScript : MonoBehaviour
 {
     [SerializeField] private Transform _playerTransform;
     void LateUpdate()

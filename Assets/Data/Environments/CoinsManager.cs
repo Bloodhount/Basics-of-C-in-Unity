@@ -13,7 +13,7 @@ public class CoinsManager : MonoBehaviour
     [SerializeField] private GameObject _win;
     public GameObject CoinPrefab;
 
-    public List<Loot> CoinsList = new List<Loot>();
+    public List<LootRotate> CoinsList = new List<LootRotate>();
     public Text CoinsText;
 
 
@@ -24,12 +24,12 @@ public class CoinsManager : MonoBehaviour
             int rnd1 = UnityEngine.Random.Range(-_coordinatesCoinGeneration, _coordinatesCoinGeneration);
             int rnd2 = UnityEngine.Random.Range(-_coordinatesCoinGeneration, _coordinatesCoinGeneration);
             GameObject newCoin = Instantiate(CoinPrefab, new Vector3(rnd1, 0.5f, rnd2), Quaternion.identity);
-            CoinsList.Add(newCoin.GetComponent<Loot>());
+            CoinsList.Add(newCoin.GetComponent<LootRotate>());
         }
         UpdateText();
     }
 
-    public void CollectCoin(Loot coin)
+    public void CollectCoin(LootRotate coin)
     {
         CoinsList.Remove(coin);
         Destroy(coin.gameObject);
@@ -46,10 +46,10 @@ public class CoinsManager : MonoBehaviour
         CoinsText.text = "Осталось: " + CoinsList.Count.ToString("0");
     }
 
-    public Loot GetLoot(Vector3 point)
+    public LootRotate GetCoin(Vector3 point)
     {
         float minDistance = Mathf.Infinity;
-        Loot closestLoot = null;
+        LootRotate closestLoot = null;
 
         for (int i = 0; i < CoinsList.Count; i++)
         {

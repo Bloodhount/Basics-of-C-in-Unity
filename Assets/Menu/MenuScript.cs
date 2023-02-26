@@ -14,8 +14,10 @@ public class MenuScript : MonoBehaviour
 
     void Start()
     {
+        //MenuScript menuScript = new MenuScript();
+        //MenuWindow = GameObject.FindGameObjectWithTag("MenuWindow1");
+        //MenuButton = GameObject.Find("MenuButton");
         _playerComtroller = FindObjectOfType<PlayerMoveComtroller>();
-
         _enemies = FindObjectsOfType<PlayerPursuit>();
     }
     public void OpenMenuWindow()
@@ -52,5 +54,10 @@ public class MenuScript : MonoBehaviour
     private void OnDestroy()
     {
         _enemies = FindObjectsOfType<PlayerPursuit>();
+    }
+    private void DontDestroyOnLoad()
+    {
+        //MenuButton;
+        //MenuWindow;
     }
 }
