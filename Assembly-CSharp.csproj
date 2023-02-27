@@ -64,8 +64,8 @@
     <Compile Include="Assets\Data\Environments\LootCounter.cs" />
     <Compile Include="Assets\Data\Environments\GenerateObjects.cs" />
     <Compile Include="Assets\Data\DisplayScripts\VFXDisplay.cs" />
-    <Compile Include="Assets\Data\HW7task3.cs" />
-    <Compile Include="Assets\Data\HW7task2.cs" />
+    <Compile Include="Assets\Data\HomeWorks\HW7task3.cs" />
+    <Compile Include="Assets\Data\HomeWorks\HW7task2.cs" />
     <Compile Include="Assets\Data\MakeDamage.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
@@ -77,7 +77,7 @@
     <Compile Include="Assets\Data\interfaces\ITakeDamage.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
-    <Compile Include="Assets\Data\HW8.cs" />
+    <Compile Include="Assets\Data\HomeWorks\HW8.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\Data\PlayerScripts\PlayerHealth.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
@@ -103,13 +103,13 @@
     <Compile Include="Assets\Data\Environments\Bomb.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
-    <Compile Include="Assets\Data\FPSDisplay.cs" />
+    <Compile Include="Assets\Data\DisplayScripts\FPSDisplay.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\Data\EnemyData\PlayerPursuit.cs" />
     <Compile Include="Assets\Data\Environments\Icon.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
     <Compile Include="Assets\Data\PlayerScripts\PlayerMoveComtroller.cs" />
-    <Compile Include="Assets\Data\FPSCounter.cs" />
+    <Compile Include="Assets\Data\DisplayScripts\FPSCounter.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
     <Compile Include="Assets\Data\interfaces\ISlower.cs" />
     <Compile Include="Assets\Data\Environments\AidKit.cs" />
@@ -126,6 +126,10 @@
     <Compile Include="Assets\Data\PlayerScripts\Pointer.cs" />
     <Compile Include="Assets\Data\EnemyData\EnemyHealth.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
+    <Compile Include="Assets\Data\HomeWorks\HW9.cs" />
+    <Compile Include="Assets\Data\HomeWorks\TestBehaviour.cs" />
+    <Compile Include="Assets\Data\HomeWorks\ReadOnlyPropertyDrawer.cs" />
+    <Compile Include="Assets\Data\HomeWorks\ReadOnlyTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
