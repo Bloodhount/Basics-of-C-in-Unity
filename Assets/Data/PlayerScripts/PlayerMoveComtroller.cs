@@ -28,9 +28,11 @@ public sealed class PlayerMoveComtroller : MonoBehaviour, IDisposable
     #region Fields
     [SerializeField] private TextMeshProUGUI _playerVelocityLabel;
     [SerializeField] private TextMeshProUGUI _bostValueLabel;
+    [SerializeField] private TextMeshProUGUI _bostCountLabel;
     [Space(5)]
     [SerializeField] private float _jumpPower;
     [SerializeField] private int _boostValueTime = 2;
+    [SerializeField] private int _SpeedBoostAvailableCount = 2;
     [SerializeField] private static int _torqueBoostValue;
     [SerializeField] private AudioSource _speedBoostSFX;
     private Transform _cameraTransformPoint;
@@ -54,9 +56,10 @@ public sealed class PlayerMoveComtroller : MonoBehaviour, IDisposable
 
         _cameraTransformPoint = FindObjectOfType<CameraFollowTo>().transform;
         CoinsManager = FindObjectOfType<CoinsManager>();
+
         _rigidbody = GetComponent<Rigidbody>();
         _rigidbody.maxAngularVelocity = 100f;
-
+        UpdateSpeedBoostCountText();
         //__________________ 3 ______________________
         #region Part 1/2 подписка
         // TestDelegate_1 = ability.Heal;
@@ -75,7 +78,6 @@ public sealed class PlayerMoveComtroller : MonoBehaviour, IDisposable
         //List<EnemyHealth> enemies = new List<EnemyHealth>();
     }
 
-
     void Update()
     {
         InputValues(); //_torqueValueLabel.text = "Boost: " + _torqueValue.ToString();
@@ -86,17 +88,47 @@ public sealed class PlayerMoveComtroller : MonoBehaviour, IDisposable
         }
 
         //___________________ 4 __________________________
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            Debug.Log(" KeyCode.Alpha2 ");
+            if (_SpeedBoostAvailableCount > 0)
+            {
+                DecreaseSpeedBoostCount();
+                PlayerSpeedUp();
+                if (_SpeedBoostAvailableCount < 0)
+                {
+                    _SpeedBoostAvailableCount = 0;
+                }
+                Invoke("PlayerSpeedDown", _boostValueTime);
+            }
+            else
+            {
+                // msg: speed booster not enough!
+            }
+        }
+
+        if (test_2_Delegate != null)
+        {
+            test_2_Delegate.Invoke(_rigidbody.velocity.magnitude);
+        }
+        else
+        {
+            LogWarning("Delegate is null");
+        }
+
+        try
+        {
+            OnChangeAbility_Delegate?.Invoke(true, _torqueValue);
+        }
+        catch (Exception e)
+        {
+            LogException(e);
+        }
         #region TEST
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             Debug.Log(" KeyCode.Alpha1 ");
             PlayerAbilities.SpeedBoost(3);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            Debug.Log(" KeyCode.Alpha2 ");
-            PlayerSpeedUp();
-            Invoke("PlayerSpeedDown", _boostValueTime);
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
@@ -119,26 +151,7 @@ public sealed class PlayerMoveComtroller : MonoBehaviour, IDisposable
         }
 
         #endregion
-
-        if (test_2_Delegate != null)
-        {
-            test_2_Delegate.Invoke(_rigidbody.velocity.magnitude);
-        }
-        else
-        {
-            LogWarning("Delegate is null");
-        }
-
-        try
-        {
-            OnChangeAbility_Delegate?.Invoke(true, _torqueValue);
-        }
-        catch (Exception e)
-        {
-            LogException(e);
-        }
     }
-
 
     private void FixedUpdate()
     {
@@ -147,7 +160,20 @@ public sealed class PlayerMoveComtroller : MonoBehaviour, IDisposable
     #endregion
 
     #region methods
-
+    private void UpdateSpeedBoostCountText()
+    {
+        _bostCountLabel.text = _SpeedBoostAvailableCount.ToString();
+    }
+    public void IncreaseSpeedBoostCount()
+    {
+        _SpeedBoostAvailableCount++;
+        UpdateSpeedBoostCountText();
+    }
+    public void DecreaseSpeedBoostCount()
+    {
+        _SpeedBoostAvailableCount--;
+        UpdateSpeedBoostCountText();
+    }
     private void InputValues()
     {
         _inputDirHorizontal = Input.GetAxis("Horizontal");
@@ -159,7 +185,7 @@ public sealed class PlayerMoveComtroller : MonoBehaviour, IDisposable
         _rigidbody.AddTorque(_cameraTransformPoint.right * _inputDirVertical * _torqueValue);
     }
 
-    public void PlayerSpeedUp() 
+    public void PlayerSpeedUp()
     {
         _abilityIsActive = true;
         _speedBoostSFX.Play();
@@ -195,7 +221,7 @@ public sealed class PlayerMoveComtroller : MonoBehaviour, IDisposable
 
     private void OnTriggerEnter(Collider other)
     {
-        Loot loot = other.GetComponent<Loot>();
+        LootRotate loot = other.GetComponent<LootRotate>();
         if (loot)
         {
             CoinsManager.CollectCoin(loot);

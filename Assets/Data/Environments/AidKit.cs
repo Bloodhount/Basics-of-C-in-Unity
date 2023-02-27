@@ -8,15 +8,23 @@ public sealed class AidKit : MonoBehaviour
     [SerializeField] private int _healValue;
     private void OnTriggerEnter(Collider other)
     {
-        if (other)
-        {
-            Debug.Log(other.name);
-        }
+        //if (other)
+        //{
+        //    Debug.Log(other.name);
+        //}
         PlayerHealth playerHealth = other.attachedRigidbody.GetComponent<PlayerHealth>();
+        //Debug.LogWarning(playerHealth.Health);
         if (playerHealth)
         {
-            playerHealth.Heal(_healValue);
-            Destroy(gameObject);
+            if (playerHealth.Health < playerHealth.MaxHealth)
+            {
+                playerHealth.Heal(_healValue); Debug.LogWarning("class AidKit. _playerHealth.Heal");
+                Destroy(gameObject);
+            }
+        }
+        else
+        {
+            Debug.Log("class AidKit. _playerHealth.Heal. else " + other.name);
         }
     }
 }

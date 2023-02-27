@@ -16,7 +16,7 @@ public class LootCounter : MonoBehaviour
         VictoryText.SetActive(false);
         Count = 0;
         TextUpdate();
-        LootToWin = FindObjectsOfType<Loot>().Length; //Debug.Log(LootToWin);
+        LootToWin = FindObjectsOfType<LootRotate>().Length; //Debug.Log(LootToWin);
     }
 
     internal void TextUpdate()
