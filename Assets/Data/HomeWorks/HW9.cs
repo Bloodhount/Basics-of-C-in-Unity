@@ -7,8 +7,47 @@ public class HW9 : MonoBehaviour
 {
 }
 [CustomEditor(typeof(TestBehaviour))]
-class MyTestBehaviourEditor : UnityEditor.Editor
+public class MyTestBehaviourEditor : UnityEditor.Editor
 {
+    private bool _isPressButtonOK;
+    public override void OnInspectorGUI()
+    {
+        TestBehaviour testTarget = (TestBehaviour)target;
+
+        testTarget.count = EditorGUILayout.IntSlider("count", testTarget.count, 10, 50);
+        testTarget.offset = EditorGUILayout.IntSlider("offset", testTarget.offset, 1, 5);
+        testTarget.obj = EditorGUILayout.ObjectField(">>>Вставить нужный объект<<<", testTarget.obj, typeof(GameObject), false) as GameObject;
+
+        var isPressButton = GUILayout.Button("Создать объект", EditorStyles.miniButtonMid);
+
+        _isPressButtonOK = GUILayout.Toggle(_isPressButtonOK, "OK");
+
+        if (isPressButton)
+        {
+            testTarget.CreateObj();
+            _isPressButtonOK = true;
+        }
+
+        if (_isPressButtonOK)
+        {
+            testTarget.Test = EditorGUILayout.Slider("Test", testTarget.Test, 10, 50);
+            EditorGUILayout.HelpBox(" button pressed", MessageType.Warning);
+
+            var isPressAddButton = GUILayout.Button("Add component", EditorStyles.miniButtonRight);
+            var isPressRemoveButton = GUILayout.Button("Remove component", EditorStyles.miniButtonLeft);
+
+            if (isPressAddButton)
+            {
+                testTarget.AddComponent();
+            }
+            if (isPressRemoveButton)
+            {
+                testTarget.RemoveComponent();
+            }
+        }
+
+        //base.OnInspectorGUI();
+    }
 
 }
 class MenuItems
