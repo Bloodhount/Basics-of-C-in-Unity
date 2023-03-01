@@ -126,10 +126,10 @@
     <Compile Include="Assets\Data\PlayerScripts\Pointer.cs" />
     <Compile Include="Assets\Data\EnemyData\EnemyHealth.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
-    <Compile Include="Assets\Data\HomeWorks\HW9.cs" />
-    <Compile Include="Assets\Data\HomeWorks\TestBehaviour.cs" />
-    <Compile Include="Assets\Data\HomeWorks\ReadOnlyPropertyDrawer.cs" />
     <Compile Include="Assets\Data\HomeWorks\ReadOnlyTest.cs" />
+    <Compile Include="Assets\Data\HomeWorks\TestBehaviour.cs" />
+    <Compile Include="Assets\Data\HomeWorks\HW9.cs" />
+    <Compile Include="Assets\Data\HomeWorks\ReadOnlyPropertyDrawer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
