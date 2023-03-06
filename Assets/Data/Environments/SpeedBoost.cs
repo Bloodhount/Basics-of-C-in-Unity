@@ -2,17 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpeedBoost : MonoBehaviour
+public class SpeedBoost : BonuseBase
 {
-   // [SerializeField] private int _addBoostCountValue;
-    private void OnTriggerEnter(Collider other)
+    public override void OnTriggerEnter(Collider other) 
     {
+        this._displayBonuses = FindObjectOfType<DisplayBonuses>();
         PlayerMoveComtroller playerCtrlScript = other.attachedRigidbody.GetComponent<PlayerMoveComtroller>();
-        //Debug.LogWarning();
         if (playerCtrlScript)
-        {         
-                playerCtrlScript.IncreaseSpeedBoostCount(); Debug.LogWarning("class SpeedBoost. IncreaseSpeedBoostCount");
-                Destroy(gameObject);            
+        {
+            playerCtrlScript.IncreaseSpeedBoostCount();
+            _displayBonuses.Display(ScoreValue);
+            Debug.LogWarning("class SpeedBoost. IncreaseSpeedBoostCount");
+            Destroy(gameObject);
         }
         else
         {
