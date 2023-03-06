@@ -3570,7 +3570,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &602943500
 Transform:
   m_ObjectHideFlags: 0
@@ -7196,9 +7196,9 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 138880006935596248, guid: 5c83a2d070ed95f4d986a602a7a88bd9,
         type: 3}
-      propertyPath: _displayBonuses
+      propertyPath: EventOnBonusCollected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2064694045}
+      objectReference: {fileID: 2064694044}
     - target: {fileID: 5025185150685747563, guid: 5c83a2d070ed95f4d986a602a7a88bd9,
         type: 3}
       propertyPath: m_RootOrder
@@ -10719,11 +10719,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2064694043}
     m_Modifications:
-    - target: {fileID: 138880006935596248, guid: 5c83a2d070ed95f4d986a602a7a88bd9,
-        type: 3}
-      propertyPath: _displayBonuses
-      value: 
-      objectReference: {fileID: 2064694045}
     - target: {fileID: 5025185150685747563, guid: 5c83a2d070ed95f4d986a602a7a88bd9,
         type: 3}
       propertyPath: m_RootOrder

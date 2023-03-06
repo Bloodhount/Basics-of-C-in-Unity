@@ -119,10 +119,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4371917652027930569}
-  - component: {fileID: 4371917652027930422}
   - component: {fileID: 4371917652027930423}
   - component: {fileID: 4371917652027930568}
   - component: {fileID: 8717920032922772091}
+  - component: {fileID: 4371917652027930422}
   - component: {fileID: 1992783333}
   m_Layer: 0
   m_Name: AidKit
@@ -147,21 +147,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4371917652027930422
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4371917652027930420}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12735e7b8d2572149a54464c1dac8259, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <ScoreValue>k__BackingField: 5
-  <_displayBonuses>k__BackingField: {fileID: 0}
-  _healValue: 1
 --- !u!65 &4371917652027930423
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -204,6 +189,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rotateSpeed: 120
+--- !u!114 &4371917652027930422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4371917652027930420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12735e7b8d2572149a54464c1dac8259, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <ScoreValue>k__BackingField: 5
+  _healValue: 1
 --- !u!114 &1992783333
 MonoBehaviour:
   m_ObjectHideFlags: 0

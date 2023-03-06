@@ -55,25 +55,11 @@ public class LootController : MonoBehaviour, IDisposable
                 flicker.Flicker();
             }
         }
-
-        //for (int i = 0; i < _interactiveObjects.Length; i++)
-        //{
-        //    var interactiveObject = _interactiveObjects[i];
-        //    if (interactiveObject == null)
-        //    {
-        //        continue;
-        //    }
-        //    if (interactiveObject is IFlay flay)
-        //    {
-        //        flay.Flay();
-        //    }
-        //    if (interactiveObject is IFlicker flicker)
-        //    {
-        //        flicker.Flicker();
-        //    }
-        //}
     }
-
+    public void RemoveObjFromList(BonuseBase @base) // (int index)
+    {
+        actions.Remove(@base);
+    }
     public void Dispose()
     {
         foreach (var o in _speedBoostObjects)
@@ -86,6 +72,7 @@ public class LootController : MonoBehaviour, IDisposable
         }
         foreach (var o in actions)
         {
+            RemoveObjFromList(o);
             Destroy(o.gameObject);
         }
         foreach (var o in _interactiveObjects)

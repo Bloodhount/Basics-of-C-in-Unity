@@ -9,6 +9,7 @@ public sealed class AidKit : BonuseBase// : MonoBehaviour
     //private DisplayBonuses _displayBonuses;
     public override void OnTriggerEnter(Collider other)
     {
+        LootController loot = FindObjectOfType<LootController>();
         _displayBonuses = FindObjectOfType<DisplayBonuses>();
         PlayerHealth playerHealth = other.attachedRigidbody.GetComponent<PlayerHealth>();
         if (playerHealth)
@@ -17,6 +18,7 @@ public sealed class AidKit : BonuseBase// : MonoBehaviour
             {
                 _displayBonuses.Display(ScoreValue);
                 playerHealth.Heal(_healValue); Debug.LogWarning("class AidKit. _playerHealth.Heal");
+                loot.RemoveObjFromList(gameObject.GetComponent<AidKit>());
                 Destroy(gameObject);
             }
         }
