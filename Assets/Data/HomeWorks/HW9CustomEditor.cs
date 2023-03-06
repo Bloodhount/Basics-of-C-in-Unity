@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-public class HW9 : MonoBehaviour
+public class HW9CustomEditor : MonoBehaviour
 {
 }
 [CustomEditor(typeof(TestBehaviour))]

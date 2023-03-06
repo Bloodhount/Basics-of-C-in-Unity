@@ -5,7 +5,7 @@ using System.Data;
 using System.IO;
 using UnityEngine;
 
-public class HW8 : MonoBehaviour
+public class HW8SaveData : MonoBehaviour
 {
     private JsonData<SaveData> _jsonData = new JsonData<SaveData>();
     private SaveData _saveData = new SaveData() { Name = "...", Position = Vector3.zero };
