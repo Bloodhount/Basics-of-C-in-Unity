@@ -17,14 +17,24 @@ public sealed class AidKit : BonuseBase// : MonoBehaviour
             if (playerHealth.Health < playerHealth.MaxHealth)
             {
                 _displayBonuses.Display(ScoreValue);
-                playerHealth.Heal(_healValue); Debug.LogWarning("class AidKit. _playerHealth.Heal");
+                playerHealth.Heal(_healValue);
                 loot.RemoveObjFromList(gameObject.GetComponent<AidKit>());
-                Destroy(gameObject, 0.1f);
+               // DestroyAidKit();
+                Debug.LogWarning("class AidKit. _playerHealth.Heal");
+            }
+            else
+            {
+                Debug.LogWarning(" _playerHealth.Heal is max");
             }
         }
         else
         {
             Debug.Log("class AidKit. _playerHealth.Heal. else " + other.name);
         }
+    }
+
+    public void DestroyAidKit()
+    {
+        Destroy(gameObject, 0.1f);
     }
 }

@@ -7,8 +7,9 @@ namespace GB
     {
         [SerializeField] public int Health { get; protected set; } = 2;
         [SerializeField] public int MaxHealth { get; protected set; } = 5;
-        public (int currentHP, int maxHP) GetHP()
+        public virtual (int currentHP, int maxHP) GetHP()
         {
+            Debug.Log("BaseHealth-GetHP " + Health + ", " + MaxHealth);
             return (Health, MaxHealth);
         }
         public virtual void Heal(int healthValue)

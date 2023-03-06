@@ -40,13 +40,16 @@ public class LootController : MonoBehaviour, IDisposable
     {
         foreach (var a in actions)
         {
+          //  Debug.Log("LootController-before- " + a);
+
             var interactiveObject = a.gameObject.GetComponentInChildren<InteractiveObject>();
+          //  Debug.Log("LootController-after- " + a);
 
             if (interactiveObject == null)
             {
                 continue;
             }
-            if (interactiveObject is IFlay flay)
+            if (interactiveObject != null && interactiveObject is IFlay flay)
             {
                 flay.Flay();
             }
@@ -59,6 +62,7 @@ public class LootController : MonoBehaviour, IDisposable
     public void RemoveObjFromList(BonuseBase @base) // (int index)
     {
         actions.Remove(@base);
+        //actions.Sort();
     }
     public void Dispose()
     {

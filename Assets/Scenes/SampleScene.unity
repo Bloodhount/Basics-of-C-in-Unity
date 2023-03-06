@@ -2900,7 +2900,17 @@ PrefabInstance:
     - target: {fileID: 4371917652027930420, guid: cd5a36b0e893aff44b1035e1cd1d606f,
         type: 3}
       propertyPath: m_Name
-      value: AidKit (5)
+      value: AidKit (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4371917652027930422, guid: cd5a36b0e893aff44b1035e1cd1d606f,
+        type: 3}
+      propertyPath: _healValue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4371917652027930422, guid: cd5a36b0e893aff44b1035e1cd1d606f,
+        type: 3}
+      propertyPath: <ScoreValue>k__BackingField
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4371917652027930423, guid: cd5a36b0e893aff44b1035e1cd1d606f,
         type: 3}
@@ -2910,7 +2920,7 @@ PrefabInstance:
     - target: {fileID: 4371917652027930569, guid: cd5a36b0e893aff44b1035e1cd1d606f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4371917652027930569, guid: cd5a36b0e893aff44b1035e1cd1d606f,
         type: 3}
@@ -3835,8 +3845,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 878f49ca2ac69614c8d1478375f74fc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hp: 1
-  _MaxHp: 5
+  _hp: 3
+  _MaxHp: 9
   TakeDamageSFX: {fileID: 147947761}
   HealSFX: {fileID: 1031242894}
   _Lose: {fileID: 576272007}
@@ -7259,6 +7269,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpeedBoost (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5025185150685747606, guid: 5c83a2d070ed95f4d986a602a7a88bd9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c83a2d070ed95f4d986a602a7a88bd9, type: 3}
 --- !u!1 &1400126131
@@ -8530,7 +8545,17 @@ PrefabInstance:
     - target: {fileID: 4371917652027930420, guid: cd5a36b0e893aff44b1035e1cd1d606f,
         type: 3}
       propertyPath: m_Name
-      value: AidKit (1)
+      value: AidKit (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4371917652027930422, guid: cd5a36b0e893aff44b1035e1cd1d606f,
+        type: 3}
+      propertyPath: _healValue
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4371917652027930422, guid: cd5a36b0e893aff44b1035e1cd1d606f,
+        type: 3}
+      propertyPath: <ScoreValue>k__BackingField
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4371917652027930423, guid: cd5a36b0e893aff44b1035e1cd1d606f,
         type: 3}
@@ -8540,7 +8565,7 @@ PrefabInstance:
     - target: {fileID: 4371917652027930569, guid: cd5a36b0e893aff44b1035e1cd1d606f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4371917652027930569, guid: cd5a36b0e893aff44b1035e1cd1d606f,
         type: 3}
@@ -8642,7 +8667,17 @@ PrefabInstance:
     - target: {fileID: 4371917652027930420, guid: cd5a36b0e893aff44b1035e1cd1d606f,
         type: 3}
       propertyPath: m_Name
-      value: AidKit (2)
+      value: AidKit (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4371917652027930422, guid: cd5a36b0e893aff44b1035e1cd1d606f,
+        type: 3}
+      propertyPath: _healValue
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4371917652027930422, guid: cd5a36b0e893aff44b1035e1cd1d606f,
+        type: 3}
+      propertyPath: <ScoreValue>k__BackingField
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4371917652027930423, guid: cd5a36b0e893aff44b1035e1cd1d606f,
         type: 3}
@@ -8652,7 +8687,7 @@ PrefabInstance:
     - target: {fileID: 4371917652027930569, guid: cd5a36b0e893aff44b1035e1cd1d606f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4371917652027930569, guid: cd5a36b0e893aff44b1035e1cd1d606f,
         type: 3}
@@ -9415,12 +9450,22 @@ PrefabInstance:
     - target: {fileID: 4371917652027930420, guid: cd5a36b0e893aff44b1035e1cd1d606f,
         type: 3}
       propertyPath: m_Name
-      value: AidKit (3)
+      value: AidKit (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4371917652027930422, guid: cd5a36b0e893aff44b1035e1cd1d606f,
+        type: 3}
+      propertyPath: _healValue
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4371917652027930422, guid: cd5a36b0e893aff44b1035e1cd1d606f,
+        type: 3}
+      propertyPath: <ScoreValue>k__BackingField
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4371917652027930569, guid: cd5a36b0e893aff44b1035e1cd1d606f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4371917652027930569, guid: cd5a36b0e893aff44b1035e1cd1d606f,
         type: 3}
@@ -9981,11 +10026,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 379154181}
-  - {fileID: 1540736895}
   - {fileID: 1276991896}
   - {fileID: 779815639}
   - {fileID: 343257703}
+  - {fileID: 1540736895}
+  - {fileID: 379154181}
   - {fileID: 4401833419602900752}
   - {fileID: 995589677}
   m_Father: {fileID: 0}
@@ -10542,10 +10587,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: AidKit (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4371917652027930422, guid: cd5a36b0e893aff44b1035e1cd1d606f,
+        type: 3}
+      propertyPath: _healValue
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4371917652027930422, guid: cd5a36b0e893aff44b1035e1cd1d606f,
+        type: 3}
+      propertyPath: <ScoreValue>k__BackingField
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4371917652027930569, guid: cd5a36b0e893aff44b1035e1cd1d606f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4371917652027930569, guid: cd5a36b0e893aff44b1035e1cd1d606f,
         type: 3}
@@ -10778,6 +10833,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SpeedBoost
+      objectReference: {fileID: 0}
+    - target: {fileID: 5025185150685747606, guid: 5c83a2d070ed95f4d986a602a7a88bd9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c83a2d070ed95f4d986a602a7a88bd9, type: 3}
