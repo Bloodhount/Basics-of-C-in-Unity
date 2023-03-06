@@ -19,7 +19,7 @@ public sealed class AidKit : BonuseBase// : MonoBehaviour
                 _displayBonuses.Display(ScoreValue);
                 playerHealth.Heal(_healValue); Debug.LogWarning("class AidKit. _playerHealth.Heal");
                 loot.RemoveObjFromList(gameObject.GetComponent<AidKit>());
-                Destroy(gameObject);
+                Destroy(gameObject, 0.1f);
             }
         }
         else
