@@ -7,7 +7,7 @@ public sealed class AidKit : BonuseBase// : MonoBehaviour
 {
     [SerializeField] private int _healValue;
     //private DisplayBonuses _displayBonuses;
-    public override void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
         LootController loot = FindObjectOfType<LootController>();
         _displayBonuses = FindObjectOfType<DisplayBonuses>();
@@ -19,12 +19,13 @@ public sealed class AidKit : BonuseBase// : MonoBehaviour
                 _displayBonuses.Display(ScoreValue);
                 playerHealth.Heal(_healValue);
                 loot.RemoveObjFromList(gameObject.GetComponent<AidKit>());
-               // DestroyAidKit();
+
+                DestroyAidKit();
                 Debug.LogWarning("class AidKit. _playerHealth.Heal");
             }
             else
             {
-                Debug.LogWarning(" _playerHealth.Heal is max");
+                Debug.LogWarning(" AidKit.Heal is max");
             }
         }
         else

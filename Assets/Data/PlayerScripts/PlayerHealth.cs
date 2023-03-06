@@ -38,10 +38,9 @@ namespace GB
             _hpBarMatColor = GetComponentInChildren<HpBarDisplay>();
             _hpBarMatColor.OnMaterialColorChanged(Health, MaxHealth);
         }
-        public override (int currentHP, int maxHP) GetHP() // (int cHp, int mHp)
+        public override (int currentHP, int maxHP) GetHP()
         {
-            // this.Health = Health; MaxHealth = _MaxHp;
-            Debug.Log("PlayerHealth-GetHP " + Health + ", " + MaxHealth);
+           // Debug.Log("PlayerHealth-GetHP " + Health + ", " + MaxHealth);
             return (this.Health, MaxHealth);
         }
         public void TakeDamage(int damageValue)
@@ -65,13 +64,17 @@ namespace GB
         }
         public override void Heal(int healthValue)
         {
-           // (int currentHP, int maxHP) playerHpHW11 = GetHP();
-            Debug.Log("PlayerHealth-override.Heal-base " + Health + ", " + MaxHealth);
-           // Debug.Log("PlayerHealth-override.Heal-playerHpHW11- " + playerHpHW11);
+            // (int currentHP, int maxHP) playerHpHW11 = GetHP();
+           // Debug.Log("PlayerHealth-override.Heal-base " + Health + ", " + MaxHealth);
+            // Debug.Log("PlayerHealth-override.Heal-playerHpHW11- " + playerHpHW11);
 
-            if (Health < _MaxHp) //   if (_hp < _MaxHp)
+            if (Health < _MaxHp)
             {
-                this.Health += healthValue; //  Health += healthValue;
+                this.Health += healthValue;
+            }
+            else
+            {
+                Debug.LogWarning(" _playerHealth.Heal is max");
             }
             if (Health > _MaxHp)
             {
@@ -86,27 +89,6 @@ namespace GB
             _playerHealthLabel.text = "Health: " + Health.ToString();
             HealSFX.Play();
             // Log<string>($"{name}", " - PlayerHealth.Heal. override void Heal");
-            #region HW 11 test
-            // base.Heal(healthValue);
-            //if (playerHpHW11.currentHP < playerHpHW11.maxHP)
-            //{
-            //    playerHpHW11.currentHP += healthValue;
-            //}
-            //if (playerHpHW11.currentHP > playerHpHW11.maxHP)
-            //{
-            //    playerHpHW11.currentHP = playerHpHW11.maxHP;
-            //}
-            //if (playerHpHW11.currentHP >= 0)
-            //{
-            //    _Lose.SetActive(false);
-            //}
-            //_playerHealthLabel.text = "Health: " + Health.ToString();
-            //_uIHp.OnHpChanged(Health, MaxHealth);
-            //_hpBarMatColor.OnMaterialColorChanged(Health, MaxHealth);
-            //HealSFX.Play();
-            //Log<string>($"{name}", " - PlayerHealth.Heal. override void Heal");
-            // Debug.Log($" {name} - Heal");
-            #endregion
         }
         public override void Die()
         {

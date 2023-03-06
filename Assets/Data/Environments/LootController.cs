@@ -4,16 +4,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class LootController : MonoBehaviour, IDisposable
+public class LootController : MonoBehaviour//, IDisposable
 {
-    private InteractiveObject[] _interactiveObjects;
+    // private InteractiveObject[] _interactiveObjects;
     private SpeedBoost[] _speedBoostObjects;
     private AidKit[] _aidKitObjects;
     [SerializeField] private List<BonuseBase> actions;
     //prop
     private void Awake()
     {
-        _interactiveObjects = FindObjectsOfType<InteractiveObject>();
+        // _interactiveObjects = FindObjectsOfType<InteractiveObject>();
         _speedBoostObjects = FindObjectsOfType<SpeedBoost>();
         _aidKitObjects = FindObjectsOfType<AidKit>();
 
@@ -38,51 +38,77 @@ public class LootController : MonoBehaviour, IDisposable
 
     void Update()
     {
-        foreach (var a in actions)
+        for (int i = 0; i < actions.Count; i++)
         {
-          //  Debug.Log("LootController-before- " + a);
-
-            var interactiveObject = a.gameObject.GetComponentInChildren<InteractiveObject>();
-          //  Debug.Log("LootController-after- " + a);
-
-            if (interactiveObject == null)
+            if (actions[i] == null)
             {
                 continue;
             }
-            if (interactiveObject != null && interactiveObject is IFlay flay)
+
+            if (actions[i] != null)
+            {
+                var interactiveObject = actions[i].GetComponentInChildren<InteractiveObject>();
+            }
+            else
+            {
+                Debug.Log("LootController-actions[i] == null- " + actions[i]);
+            }
+
+            if (actions[i] != null && actions[i] is IFlay flay)
             {
                 flay.Flay();
             }
-            if (interactiveObject is IFlicker flicker)
+            if (actions[i] != null && actions[i] is IFlicker flicker)
             {
                 flicker.Flicker();
             }
         }
+
+        //foreach (var a in actions)
+        //{
+        //    //  Debug.Log("LootController-before- " + a);
+
+        //    var interactiveObject = a.gameObject.GetComponentInChildren<InteractiveObject>();
+        //    //  Debug.Log("LootController-after- " + a);
+
+        //    if (interactiveObject == null)
+        //    {
+        //        continue;
+        //    }
+        //    if (interactiveObject != null && interactiveObject is IFlay flay)
+        //    {
+        //        flay.Flay();
+        //    }
+        //    if (interactiveObject is IFlicker flicker)
+        //    {
+        //        flicker.Flicker();
+        //    }
+        //}
     }
     public void RemoveObjFromList(BonuseBase @base) // (int index)
     {
         actions.Remove(@base);
         //actions.Sort();
     }
-    public void Dispose()
-    {
-        foreach (var o in _speedBoostObjects)
-        {
-            Destroy(o.gameObject);
-        }
-        foreach (var o in _aidKitObjects)
-        {
-            Destroy(o.gameObject);
-        }
-        foreach (var o in actions)
-        {
-            RemoveObjFromList(o);
-            Destroy(o.gameObject);
-        }
-        foreach (var o in _interactiveObjects)
-        {
-            Destroy(o.gameObject);
-        }
-    }
+    //public void Dispose()
+    //{
+    //    foreach (var o in _speedBoostObjects)
+    //    {
+    //        Destroy(o.gameObject);
+    //    }
+    //    foreach (var o in _aidKitObjects)
+    //    {
+    //        Destroy(o.gameObject, 1);
+    //    }
+    //    foreach (var o in actions)
+    //    {
+    //        RemoveObjFromList(o);
+    //        Destroy(o.gameObject);
+    //    }
+    //    //foreach (var o in _interactiveObjects)
+    //    //{
+    //    //    Destroy(o.gameObject);
+    //    //}
+    //}
 }
 

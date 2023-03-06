@@ -35,6 +35,8 @@ public sealed class PlayerMoveComtroller : MonoBehaviour, IDisposable
     [SerializeField] private int _SpeedBoostAvailableCount = 2;
     [SerializeField] private static int _torqueBoostValue;
     [SerializeField] private AudioSource _speedBoostSFX;
+    [SerializeField] private AudioSource CollectSpeedBoostSFX;
+
     private Transform _cameraTransformPoint;
     private CoinsManager CoinsManager;
     private Rigidbody _rigidbody;
@@ -166,6 +168,8 @@ public sealed class PlayerMoveComtroller : MonoBehaviour, IDisposable
     }
     public void IncreaseSpeedBoostCount()
     {
+        CollectSpeedBoostSFX.pitch = 3;
+        CollectSpeedBoostSFX.Play();
         _SpeedBoostAvailableCount++;
         UpdateSpeedBoostCountText();
     }
@@ -221,7 +225,7 @@ public sealed class PlayerMoveComtroller : MonoBehaviour, IDisposable
 
     private void OnTriggerEnter(Collider other)
     {
-        LootRotate loot = other.GetComponent<LootRotate>();
+        Coin loot = other.GetComponent<Coin>();
         if (loot)
         {
             CoinsManager.CollectCoin(loot);
