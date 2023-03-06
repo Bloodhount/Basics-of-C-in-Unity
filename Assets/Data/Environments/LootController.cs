@@ -41,6 +41,7 @@ public class LootController : MonoBehaviour, IDisposable
         foreach (var a in actions)
         {
             var interactiveObject = a.gameObject.GetComponentInChildren<InteractiveObject>();
+
             if (interactiveObject == null)
             {
                 continue;

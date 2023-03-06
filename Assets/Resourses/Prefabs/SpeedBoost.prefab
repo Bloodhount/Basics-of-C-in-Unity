@@ -92,7 +92,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c23987f7022dff24f819af7bc454efc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _displayBonuses: {fileID: 0}
+  <ScoreValue>k__BackingField: 5
+  <_displayBonuses>k__BackingField: {fileID: 0}
 --- !u!114 &4401833419602900757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -296,7 +297,7 @@ MeshCollider:
   m_GameObject: {fileID: 8695183596118030943}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
