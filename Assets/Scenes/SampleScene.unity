@@ -2902,6 +2902,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: AidKit (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 4371917652027930423, guid: cd5a36b0e893aff44b1035e1cd1d606f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4371917652027930569, guid: cd5a36b0e893aff44b1035e1cd1d606f,
         type: 3}
       propertyPath: m_RootOrder
@@ -8527,6 +8532,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: AidKit (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4371917652027930423, guid: cd5a36b0e893aff44b1035e1cd1d606f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4371917652027930569, guid: cd5a36b0e893aff44b1035e1cd1d606f,
         type: 3}
       propertyPath: m_RootOrder
@@ -8633,6 +8643,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AidKit (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4371917652027930423, guid: cd5a36b0e893aff44b1035e1cd1d606f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4371917652027930569, guid: cd5a36b0e893aff44b1035e1cd1d606f,
         type: 3}
@@ -9392,6 +9407,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2064694043}
     m_Modifications:
+    - target: {fileID: 4371917651671634406, guid: cd5a36b0e893aff44b1035e1cd1d606f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4371917652027930420, guid: cd5a36b0e893aff44b1035e1cd1d606f,
         type: 3}
       propertyPath: m_Name
