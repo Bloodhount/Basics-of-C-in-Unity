@@ -20,7 +20,7 @@ public class HW7task2 : MonoBehaviour
         return;
 
         // home work 7
-        string str1 = "dfsdfgwe32rqw24оривr";
+      //  string str1 = "dfsdfgwe32rqw24оривr";
         // MyExtensions.FindingLengthtOfString(str1);
     }
     public string Load(string savePath = null)

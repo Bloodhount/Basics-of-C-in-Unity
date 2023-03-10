@@ -8,39 +8,41 @@ using UnityEngine.Events;
 
 namespace GB
 {
-    public sealed class PlayerHealth : BaseHealth, ITakeDamage, ILog  //MonoBehaviour
+    public sealed class PlayerHealth : BaseHealth, ITakeDamage, ILog
     {
         [SerializeField] private int _hp = 4;
+        [SerializeField] private int _MaxHp = 5;
 
-        [field: SerializeField] private int _MaxHp = 5;
         [SerializeField] private AudioSource TakeDamageSFX;
         [SerializeField] private AudioSource HealSFX;
         [SerializeField] private GameObject _Lose;
         [SerializeField] private TextMeshProUGUI _playerHealthLabel;
-        //  [SerializeField] 
+
         private UIHpBarDisplay _uIHp;
-        //  [SerializeField] 
         private HpBarDisplay _hpBarMatColor;
 
         [Space(5)] [SerializeField] private UnityEvent _eventOnDie;
-
         private Action<float, float> OnHpChanged;
+
         public void Start()
         {
-            this.Health = _hp;
-            this.MaxHealth = _MaxHp;
-            _uIHp = GetComponentInChildren<UIHpBarDisplay>();   // 1й вариант
-            _uIHp.OnHpChanged(Health, MaxHealth);                 // 1й вариант
+            Health = _hp; MaxHealth = _MaxHp;
+            (int currentHP, int maxHP) playerHp = GetHP();
+            // Debug.Log("PlayerHealth-Start-base- " + Health + ", " + MaxHealth);
+            // Debug.Log("PlayerHealth-Start-playerHpHW11- " + playerHp);
+            //playerHp.currentHP = _hp;
+            //playerHp.maxHP = _MaxHp;
+            _uIHp = GetComponentInChildren<UIHpBarDisplay>();
+            _uIHp.OnHpChanged(Health, MaxHealth);
             _playerHealthLabel.text = "Health: " + Health.ToString();
             _hpBarMatColor = GetComponentInChildren<HpBarDisplay>();
             _hpBarMatColor.OnMaterialColorChanged(Health, MaxHealth);
         }
-
-        //public PlayerHealth()
-        //{
-        //    Health = 4;
-        //    _playerHealthLabel.text = "Health: " + Health.ToString();
-        //}
+        public override (int currentHP, int maxHP) GetHP()
+        {
+           // Debug.Log("PlayerHealth-GetHP " + Health + ", " + MaxHealth);
+            return (this.Health, MaxHealth);
+        }
         public void TakeDamage(int damageValue)
         {
             this.Health -= damageValue;
@@ -62,25 +64,31 @@ namespace GB
         }
         public override void Heal(int healthValue)
         {
-            // base.Heal(healthValue);
-            if (_hp < _MaxHp)
+            // (int currentHP, int maxHP) playerHpHW11 = GetHP();
+           // Debug.Log("PlayerHealth-override.Heal-base " + Health + ", " + MaxHealth);
+            // Debug.Log("PlayerHealth-override.Heal-playerHpHW11- " + playerHpHW11);
+
+            if (Health < _MaxHp)
             {
-                Health += healthValue;
+                this.Health += healthValue;
             }
-            if (Health > MaxHealth)
+            else
             {
-                Health = MaxHealth;
+                Debug.LogWarning(" _playerHealth.Heal is max");
+            }
+            if (Health > _MaxHp)
+            {
+                Health = _MaxHp;
             }
             if (Health >= 0)
             {
                 _Lose.SetActive(false);
             }
-            _playerHealthLabel.text = "Health: " + Health.ToString();
             _uIHp.OnHpChanged(Health, MaxHealth);
             _hpBarMatColor.OnMaterialColorChanged(Health, MaxHealth);
+            _playerHealthLabel.text = "Health: " + Health.ToString();
             HealSFX.Play();
-            Log<string>($"{name}", " - PlayerHealth.Heal. override void Heal");
-            // Debug.Log($" {name} - Heal");
+            // Log<string>($"{name}", " - PlayerHealth.Heal. override void Heal");
         }
         public override void Die()
         {

@@ -4,20 +4,28 @@ using UnityEngine;
 
 public class SpeedBoost : BonuseBase
 {
-    public override void OnTriggerEnter(Collider other) 
+    public void OnTriggerEnter(Collider other)
     {
-        this._displayBonuses = FindObjectOfType<DisplayBonuses>();
+        LootController loot = FindObjectOfType<LootController>();
+        _displayBonuses = FindObjectOfType<DisplayBonuses>();
         PlayerMoveComtroller playerCtrlScript = other.attachedRigidbody.GetComponent<PlayerMoveComtroller>();
         if (playerCtrlScript)
         {
-            playerCtrlScript.IncreaseSpeedBoostCount();
             _displayBonuses.Display(ScoreValue);
-            Debug.LogWarning("class SpeedBoost. IncreaseSpeedBoostCount");
-            Destroy(gameObject);
+            playerCtrlScript.IncreaseSpeedBoostCount();
+            loot.RemoveObjFromList(gameObject.GetComponent<SpeedBoost>());
+            DestroySpeedBoost();
+            // EventOnBonusCollected.AddListener();
+            // EventOnBonusCollected.Invoke();
         }
         else
         {
             Debug.Log("class SpeedBoost. else " + other.name);
         }
+    }
+
+    private void DestroySpeedBoost()
+    {
+        Destroy(gameObject, 0.1f);
     }
 }

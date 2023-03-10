@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Pointer : MonoBehaviour
 {
     public CoinsManager CoinsManager;
-    public LootRotate ClosestLoot;
+    public Coin ClosestLoot;
     public Text DistToCoinText;
 
     //private float DistanceToCoin;
